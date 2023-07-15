@@ -65,7 +65,7 @@ def print_results(results_dic, results_stats_dic, model,
     print("\n\n*** Results Summary for CNN Model Architecture",model.upper(),"***")
     print("%20s: %3d" % ('N Images',results_stats_dic['num_images']))
     print("%20s: %3d" % ('N Dog Images',results_stats_dic['num_dogsImg']))
-    print("%20s: %3d" % ('N Not-Dog Images',results_stats_dic['num_notdogsImg']))
+    print("%20s: %3d" % ('N Not-Dog Images',results_stats_dic['num_NotDogsImg']))
     print(" ")
     for key in results_stats_dic:
         if key[0] == "p":
