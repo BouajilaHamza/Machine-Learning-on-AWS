@@ -43,8 +43,8 @@ def get_pet_labels(image_dir):
     # Replace None with the results_dic dictionary that you created with this
     # function
     d = {}
-  
-    labels = [ i.split("_")[:-1] for i  in listdir(image_dir) ]
+    
+    labels = [ i.split("_")[:-1] for i  in listdir(image_dir) if i[0] != "."]
     l =  []
     for i in labels :
         var = ""
