@@ -43,14 +43,17 @@ def get_pet_labels(image_dir):
     # Replace None with the results_dic dictionary that you created with this
     # function
     d = {}
+    l = []
+    names = [ i for i  in listdir(image_dir) ]
+    letters = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_")
     
-    labels = [ i.split("_")[:-1] for i  in listdir(image_dir) if i[0] != "."]
-    l =  []
-    for i in labels :
+    for i in names :
         var = ""
         for j in i :
-            var += f"{j} "
-        l.append(var.strip().lower()) 
+            if j in letters :
+                var += j
+        l.append(var.strip().lower().replace("jpg" , "").replace("_" , " ").strip()) 
+   
     idx = 0
     for i in listdir(image_dir) :
         d[i] = [l[idx]]
