@@ -36,7 +36,7 @@ The Pet Classifier project is a machine learning application designed to classif
 - Provides detailed statistics on classification results.
 
 ## Requirements
-- Python 3.7 or higher
+- Python 3.12 or higher
 - Required Python libraries are listed in `requirements.txt` (to be created).
 
 ## Setup
