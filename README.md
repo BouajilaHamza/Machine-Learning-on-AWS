@@ -13,7 +13,20 @@ The Pet Classifier project is a machine learning application designed to classif
 │   ├── dognames.txt                  # List of dog breed names
 │   ├── imagenet1000_clsid_to_human.txt # Mapping of ImageNet class IDs to human-readable labels
 │   └── pet_images/                   # Directory containing pet and other animal images
+│       ├── Basenji_00963.jpg
+│       ├── Basenji_00974.jpg
+│       ├── Basset_hound_01034.jpg
+│       ├── Beagle_01125.jpg
+│       ├── ...                       # Additional pet and animal images
+├── hints/
+│   ├── adjust_results4_isadog_hints.py
+│   ├── calculates_results_stats_hints.py
+│   ├── classify_images_hints.py
+│   ├── get_input_args_hints.py
+│   ├── get_pet_labels_hints.py
+│   └── print_results_hints.py
 ├── scripts/
+│   ├── __init__.py                   # Initialization file for the scripts module
 │   ├── adjust_results4_isadog.py     # Adjusts classification results to identify dogs
 │   ├── calculates_results_stats.py   # Calculates statistics for classification results
 │   ├── check_images.py               # Main script to classify images
@@ -21,12 +34,15 @@ The Pet Classifier project is a machine learning application designed to classif
 │   ├── classify_images.py            # Classifies images using a pre-trained model
 │   ├── get_input_args.py             # Parses command-line arguments
 │   ├── get_pet_labels.py             # Extracts pet labels from image filenames
+│   ├── print_functions_for_lab_checks.py # Utility functions for debugging
 │   ├── print_results.py              # Prints classification results
-│   └── print_functions_for_lab_checks.py # Utility functions for debugging
+│   └── __pycache__/                  # Compiled Python files
 ├── tests/
 │   └── test_classifier.py            # Unit tests for the classifier
+├── check_images.txt                  # Example output file for image classification
+├── pyproject.toml                    # Project configuration file
 ├── README.md                         # Project documentation
-└── check_images.txt                  # Example output file for image classification
+└── uv.lock                           # Lock file for dependencies
 ```
 
 ## Features
