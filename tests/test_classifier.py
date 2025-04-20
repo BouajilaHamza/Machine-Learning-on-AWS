@@ -15,10 +15,10 @@
 # Usage: python test_classifier.py    -- will run program from commandline
 
 # Imports classifier function for using pretrained CNN to classify images 
-from classifier import classifier 
+from scripts.classifier import classifier 
 
 # Defines a dog test image from pet_images folder
-test_image="pet_images/Collie_03797.jpg"
+test_image="data/pet_images/Collie_03797.jpg"
 
 # Defines a model architecture to be used for classification
 # NOTE: this function only works for model architectures: 

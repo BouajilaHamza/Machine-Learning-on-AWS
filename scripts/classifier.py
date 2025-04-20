@@ -2,17 +2,17 @@ import ast
 from PIL import Image
 import torchvision.transforms as transforms
 from torch.autograd import Variable
-import torchvision.models as models
+from torchvision.models import models,VGG16_Weights, ResNet18_Weights, AlexNet_Weights
 from torch import __version__
 
-resnet18 = models.resnet18(pretrained=True)
-alexnet = models.alexnet(pretrained=True)
-vgg16 = models.vgg16(pretrained=True)
+resnet18 = models.resnet18(weights=ResNet18_Weights.DEFAULT)
+alexnet = models.alexnet(weights=AlexNet_Weights.DEFAULT)
+vgg16 = models.vgg16(weights=VGG16_Weights.DEFAULT)
 
 models = {'resnet': resnet18, 'alexnet': alexnet, 'vgg': vgg16}
 
 # obtain ImageNet labels
-with open('imagenet1000_clsid_to_human.txt') as imagenet_classes_file:
+with open('data/imagenet1000_clsid_to_human.txt') as imagenet_classes_file:
     imagenet_classes_dict = ast.literal_eval(imagenet_classes_file.read())
 
 def classifier(img_path, model_name):
